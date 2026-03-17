@@ -187,6 +187,7 @@ main img {
 
 @media (max-width: 480px) {
  header {
+    width: 480px;
         padding: 10px 0; /* 상하 여백 축소 */
     }
 
