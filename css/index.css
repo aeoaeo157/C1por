@@ -192,7 +192,7 @@ html {
 
  header {
     width: 100%;
-    max-width: 460px;
+    max-width: 440px;
         padding: 20px 0; /* 상하 여백 축소 */
     }
 
@@ -218,7 +218,7 @@ html {
     }
 
     header .gnb ul li a {
-        font-size: 18px; /* 글자 크기를 최소화 */
+        font-size: 16px; /* 글자 크기를 최소화 */
         letter-spacing: -0.5px; /* 자간을 줄여 가로폭 확보 */
         text-align: center;
 }
