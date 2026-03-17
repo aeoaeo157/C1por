@@ -188,7 +188,7 @@ main img {
 @media (max-width: 480px) {
  header {
     width: 480px;
-        padding: 10px 0; /* 상하 여백 축소 */
+        padding: 20px 0; /* 상하 여백 축소 */
     }
 
     header nav {
@@ -199,7 +199,7 @@ main img {
     }
 
     header .logo img {
-        width: 40px;     /* 로고 크기를 확 줄임 */
+        width: 50px;     /* 로고 크기를 확 줄임 */
     }
 
     header .gnb ul {
@@ -212,8 +212,12 @@ main img {
     }
 
     header .gnb ul li a {
-        font-size: 13px; /* 글자 크기를 최소화 */
+        font-size: 14px; /* 글자 크기를 최소화 */
         letter-spacing: -0.5px; /* 자간을 줄여 가로폭 확보 */
+        text-align: center;
+}
+main img {
+    padding-top: 50px;
 }
 }
 
