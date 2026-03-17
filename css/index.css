@@ -1,8 +1,10 @@
 @charset "utf-8";
 
+
 html {
     /* 스크롤을 부드럽게 이동시킵니다 */
     scroll-behavior: smooth;
+overflow-x: hidden;
 }
 
 section {
@@ -75,16 +77,12 @@ header.on {
 }
 
 header nav {
-    width: 1720px;
+   width: 95%;      /* 화면의 95%만 차지하도록 유연하게 설정 */
+    max-width: 1720px; /* 최대 너비는 제한 */
     margin: 0 auto;
-
-
     display: flex;
-    /* 자식 요소들을 가로로 나열합니다 */
     justify-content: space-between;
-    /* 로고는 왼쪽, 메뉴는 오른쪽에 배치합니다 */
     align-items: center;
-    /* 세로 중앙 정렬을 맞춥니다 */
 
 }
 
@@ -127,7 +125,7 @@ main img {
 
 @media screen and (max-width: 1776px) {
     header nav {
-        width: 1620px;
+     width: 95%; /* 고정 px 대신 % 사용 */
         margin: 0 auto;
     }
 
@@ -188,32 +186,35 @@ main img {
 
 
 @media (max-width: 480px) {
-    header {
-        padding: 20px 0 23px 0;
+ header {
+        padding: 10px 0; /* 상하 여백 축소 */
     }
 
-    header .logo {
-        width: 100%;
+    header nav {
+        width: 100%;     /* 부모 너비에 꽉 맞춤 */
+        flex-direction: column; /* 로고와 메뉴를 위아래로 배치 */
+        gap: 8px;        /* 로고와 메뉴 사이 간격 */
+        padding: 0 10px; /* 양옆 최소 여백 */
     }
 
     header .logo img {
-        width: 60px;
+        width: 40px;     /* 로고 크기를 확 줄임 */
+    }
+
+    header .gnb ul {
+        justify-content: center; /* 메뉴를 가운데로 모음 */
+        gap: 8px;        /* 메뉴 항목 간격 축소 */
     }
 
     header .gnb ul li {
-        margin-left: 16px;
+        margin-left: 0;  /* 기존에 들어간 마진 제거 */
     }
 
     header .gnb ul li a {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    main {
-        padding-top: 50px;
-    }
+        font-size: 13px; /* 글자 크기를 최소화 */
+        letter-spacing: -0.5px; /* 자간을 줄여 가로폭 확보 */
 }
-
+}
 
 
 /* ********************** 슬로건 ********************** */
@@ -422,6 +423,96 @@ main img {
 .about .about-text .top {
     margin-bottom: 30px;
 }
+
+
+@media (max-width: 1530px) {
+.about .profile img {
+    width: 400px;
+    height: auto;
+}
+.about .about-text .top img{
+  width: 55%;
+}
+.about .about-text .under img{
+  width: 80%;
+}
+}
+
+@media (max-width: 1530px) {
+.about .profile img {
+    width: 300px;
+    height: auto;
+}
+.about .about-text .top img{
+  width: 55%;
+}
+.about .about-text .under img{
+  width: 80%;
+}
+}
+
+@media (max-width: 1226px) {
+.about .profile img {
+    width: 250px;
+    height: auto;
+}
+.about .about-text .top img{
+  width: 45%;
+}
+.about .about-text .under img{
+  width: 65%;
+}
+}
+
+@media (max-width: 1094px) {
+.about .profile {
+    margin-right: 50px;
+}
+.about .profile ul li p {
+    font-size: 20px;
+}
+.about .profile img {
+    width: 200px;
+    height: auto;
+}
+.about .about-text .top img{
+  width: 40%;
+}
+.about .about-text .under img{
+  width: 55%;
+}
+}
+
+@media (max-width: 1000px) {
+    .about {
+        width: 1000px;
+        overflow: hidden;
+    }
+.about .profile {
+    text-align: center;
+    margin-right: none;
+    margin: 0 auto;
+}
+.about .profile ul li p {
+    font-size: 20px;
+}
+.about .profile img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+.about .about-text .top img{
+  width: 40%;
+}
+.about .about-text .under img{
+  width: 55%;
+}
+}
+
+
+
+
+
 
 /* ******************* 스킬 ************************ */
 
