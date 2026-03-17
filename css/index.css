@@ -7,7 +7,7 @@ html {
 
 section {
     /* 고정된 헤더 높이만큼 섹션 시작 부분에 여백을 주어 제목이 가려지지 않게 합니다 */
-    scroll-margin-top: 80px; 
+    scroll-margin-top: 80px;
 }
 
 
@@ -34,10 +34,13 @@ header {
 
 .top-btn {
     position: fixed;
-    bottom: 40px;    /* 하단에서 40px 띄움 */
-    right: 40px;     /* 오른쪽에서 40px 띄움 */
-    z-index: 9999;   /* 다른 요소보다 위에 보이게 설정 */
-    
+    bottom: 40px;
+    /* 하단에서 40px 띄움 */
+    right: 40px;
+    /* 오른쪽에서 40px 띄움 */
+    z-index: 9999;
+    /* 다른 요소보다 위에 보이게 설정 */
+
     /* 초기 상태: 스크롤 전에는 숨겨두고 싶다면 아래 속성 추가 (선택사항) */
     opacity: 0;
     visibility: hidden;
@@ -51,7 +54,8 @@ header {
 }
 
 .top-btn img {
-    width: 50px;     /* 버튼 크기 조절 */
+    width: 50px;
+    /* 버튼 크기 조절 */
     height: 30px;
     cursor: pointer;
     /* 호버 효과: 살짝 떠오르는 느낌 */
@@ -112,11 +116,92 @@ header .gnb ul li a:hover {
 
 main img {
     width: 100%;
+    display: block;
+    /* 이미지 하단 미세 여백 제거 */
+    height: auto;
+    /* 비율 유지 */
 }
 
 
 
 
+@media screen and (max-width: 1776px) {
+    header nav {
+        width: 1620px;
+        margin: 0 auto;
+    }
+
+    main img {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 990px) {
+
+    header {
+        padding: 15px 0 17px 0;
+    }
+    header .logo img {
+        width: 50px;
+    }
+    header .gnb ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 786px) {
+
+    header {
+        padding: 10px 0 12px 0;
+    }
+    header .logo img {
+        width: 45px;
+    }
+    header .gnb ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 606px) {
+
+    header {
+        padding: 7px 0 9px 0;
+    }
+    header .logo img {
+        width: 40px;
+    }
+    header .gnb ul li {
+        margin-left: 20px;
+    }
+    header .gnb ul li a {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 0 23px 0;
+    }
+header .logo {
+    width: 100%;
+}
+    header .logo img {
+        width: 60px;
+    }
+    header .gnb ul li {
+        margin-left: 16px;
+    }
+    header .gnb ul li a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    main {
+        padding-top: 50px;
+    }
+}
 
 
 
@@ -153,7 +238,7 @@ main img {
 }
 
 .scroll-text .en {
-     font-family: 'Pretendard';
+    font-family: 'Pretendard';
     font-weight: 600;
     font-size: 35px;
     line-height: 1.2;
@@ -308,7 +393,7 @@ main img {
 }
 
 .skill .sec ul li {
-   background-color: #252231;
+    background-color: #252231;
 }
 
 .skill .thir ul li {
@@ -335,16 +420,16 @@ main img {
 
 
 .mp .title p {
-      font-family: 'Pretendard';
-        font-weight: 300;
+    font-family: 'Pretendard';
+    font-weight: 300;
     font-size: 18px;
     color: #ff9c1c;
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .mp .title p span {
     color: #ff9c1c;
-         font-weight: 600;
+    font-weight: 600;
 }
 
 .mp h2 {
@@ -382,7 +467,7 @@ margin-bottom: 10px;
 }
 
 .mp .text .kko {
-     font-family: 'Pretendard';
+    font-family: 'Pretendard';
     font-weight: 600;
     font-size: 45px;
     color: #ff9c1c;
@@ -391,7 +476,7 @@ margin-bottom: 10px;
 .mp .text .sub {
     font-size: 20px;
     color: #000;
-     font-family: 'Pretendard';
+    font-family: 'Pretendard';
     font-weight: 600;
     font-size: 35px;
 }
@@ -456,8 +541,8 @@ margin-bottom: 10px;
 
 
 .mp .btn ul li .protect {
-  color: #ff9c1c;
-  border: 1px solid #ff9c1c;
+    color: #ff9c1c;
+    border: 1px solid #ff9c1c;
 }
 
 
@@ -465,11 +550,11 @@ margin-bottom: 10px;
 /* *************** 디자인 ******************** */
 
 .design {
-width: 100%;
+    width: 100%;
 }
 
 .design .de-title h2 {
-      width: 1720px;
+    width: 1720px;
     font-family: 'Pretendard';
     font-weight: 200;
     font-size: 50px;
@@ -477,9 +562,9 @@ width: 100%;
 }
 
 .design .de-title .tool {
-      width: 1720px;
+    width: 1720px;
     font-family: 'Pretendard';
-        font-weight: 300;
+    font-weight: 300;
     font-size: 18px;
     color: #b286ce;
     margin-bottom: 20px;
@@ -488,16 +573,17 @@ width: 100%;
 .design .de-title p {
     margin-bottom: 10px;
 }
+
 .design .de-title p span {
     color: #b286ce;
-         font-weight: 600;
+    font-weight: 600;
 }
 
 
 .design .de-title {
     width: 1720px;
     margin: 0 auto;
-      margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .design .de-title .btn1 a {
@@ -513,7 +599,7 @@ width: 100%;
 
 .design .de-title .btn1 span {
     font-size: 20px;
-     color: #fff;
+    color: #fff;
 }
 
 .design .de-title .btn2 a {
@@ -526,37 +612,44 @@ width: 100%;
     color: #fff;
     display: inline-block;
     border-radius: 5px;
-      margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .design .de-title .btn2 span {
     font-size: 20px;
-     color: #fff;
+    color: #fff;
 }
 
 /* 기존 .design .gallery 관련 코드를 아래와 같이 수정/추가하세요 */
 
 .design .gallery {
     width: 100%;
-    overflow: hidden; /* 화면 밖으로 나가는 이미지 숨김 */
+    overflow: hidden;
+    /* 화면 밖으로 나가는 이미지 숨김 */
 
-margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .design .gallery ul {
-    display: flex; /* 가로 나열 */
-    width: max-content; /* 내용물 너비만큼 길게 설정 */
-    animation: marquee 110s linear infinite; /* 40초 동안 무한 반복 */
+    display: flex;
+    /* 가로 나열 */
+    width: max-content;
+    /* 내용물 너비만큼 길게 설정 */
+    animation: marquee 110s linear infinite;
+    /* 40초 동안 무한 반복 */
 }
 
 .design .gallery ul li {
     display: block;
-    flex-shrink: 0; /* 크기가 줄어들지 않도록 설정 */
-    padding: 0 10px; /* 이미지 사이 간격 */
+    flex-shrink: 0;
+    /* 크기가 줄어들지 않도록 설정 */
+    padding: 0 10px;
+    /* 이미지 사이 간격 */
 }
 
 .design .gallery img {
-    width: 650px; /* 이미지 크기는 적절히 조절하세요 */
+    width: 650px;
+    /* 이미지 크기는 적절히 조절하세요 */
     height: auto;
     display: block;
     border-radius: 5px;
@@ -569,7 +662,7 @@ margin-bottom: 40px;
 .design .gallery2 {
     width: 100%;
     overflow: hidden;
-   margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .design .gallery2 div {
@@ -579,7 +672,7 @@ margin-bottom: 40px;
 }
 
 .design .gallery2 ul {
-display: flex;
+    display: flex;
     width: max-content;
     /* 1. 속도를 gallery(90s)와 비슷하게 맞추거나 조금 더 빠르게(60s) 조절하세요 */
     /* 현재 35s는 이미지가 지나가는 속도가 너무 빨라 끊김이 도드라져 보일 수 있습니다. */
@@ -593,8 +686,8 @@ display: flex;
 }
 
 .design .gallery2 img {
-   height: 500px;
-   width: auto;
+    height: 500px;
+    width: auto;
     display: block;
     border-radius: 5px;
 }
@@ -604,6 +697,7 @@ display: flex;
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -615,6 +709,7 @@ display: flex;
         /* 시작점을 -50%로 잡습니다 (이미 절반이 왼쪽으로 가 있는 상태) */
         transform: translateX(-50%);
     }
+
     100% {
         /* 끝점을 0으로 잡습니다 */
         transform: translateX(0);
@@ -632,18 +727,24 @@ display: flex;
     width: 100%;
     border-top: 1px solid #a3a3a3;
     border-bottom: 1px solid #a3a3a3;
-    overflow: hidden; /* 테두리 겹침 방지 */
+    overflow: hidden;
+    /* 테두리 겹침 방지 */
 }
 
 .contact ul {
-    width: 100%; /* 부모 너비 전체 사용 */
-    display: flex; /* 가로 나열 */
-    align-items: stretch; /* 자식 li들의 높이를 동일하게 맞춤 */
+    width: 100%;
+    /* 부모 너비 전체 사용 */
+    display: flex;
+    /* 가로 나열 */
+    align-items: stretch;
+    /* 자식 li들의 높이를 동일하게 맞춤 */
 }
 
 .contact ul li {
-    flex: 1; /* 모든 칸의 너비를 동일하게 배분 */
-    border-right: 1px solid #a3a3a3; /* 오른쪽 구분선 */
+    flex: 1;
+    /* 모든 칸의 너비를 동일하게 배분 */
+    border-right: 1px solid #a3a3a3;
+    /* 오른쪽 구분선 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -657,16 +758,19 @@ display: flex;
 
 /* 텍스트가 들어가는 첫 번째 칸 (Let's Work Together!) */
 .contact ul li.text {
-    flex: 3; /* 텍스트 칸을 아이콘 칸보다 더 넓게 설정 (조절 가능) */
+    flex: 3;
+    /* 텍스트 칸을 아이콘 칸보다 더 넓게 설정 (조절 가능) */
     font-family: 'Pretendard';
     font-weight: 500;
     font-size: 35px;
-    padding: 60px 0; /* 상하 높이 조절 */
+    padding: 60px 0;
+    /* 상하 높이 조절 */
 }
 
 /* 아이콘이 들어가는 링크 칸 설정 */
 .contact ul li a {
-    display: flex; /* 클릭 영역을 칸 전체로 확장 */
+    display: flex;
+    /* 클릭 영역을 칸 전체로 확장 */
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -681,7 +785,8 @@ display: flex;
 }
 
 .contact ul li img {
-    width: 45px; /* 시안에 맞춰 아이콘 크기 조절 */
+    width: 45px;
+    /* 시안에 맞춰 아이콘 크기 조절 */
     height: auto;
 }
 
@@ -693,7 +798,7 @@ display: flex;
 }
 
 .contact .email a {
-       font-family: 'Pretendard';
+    font-family: 'Pretendard';
     font-weight: 500;
     font-size: 55px;
 }
@@ -710,14 +815,15 @@ display: flex;
 
 /* 모달 배경 */
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 10000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* 배경을 약간 더 투명하게 */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* 배경을 약간 더 투명하게 */
 }
 
 /* 팝업 컨테이너 (하얀 박스) */
@@ -726,14 +832,18 @@ display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    background-color: #fff; /* 하얀색 배경 */
-    padding: 20px;          /* 테두리 여백 */
-    border-radius: 10px;    /* 모서리 곡률 */
-    
-    width: 400px;           /* 시안처럼 작은 크기로 고정 */
+
+    background-color: #fff;
+    /* 하얀색 배경 */
+    padding: 20px;
+    /* 테두리 여백 */
+    border-radius: 10px;
+    /* 모서리 곡률 */
+
+    width: 400px;
+    /* 시안처럼 작은 크기로 고정 */
     height: auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* 닫기 버튼 위치 조정 */
@@ -763,4 +873,47 @@ footer div {
     font-weight: 400;
     font-size: 18px;
     color: #777777;
+}
+
+
+
+
+
+
+header nav,
+.about,
+.skill,
+.mp,
+.design .de-title,
+footer div {
+    width: 95%;
+    /* 화면이 작을 때 양옆 여백 확보 */
+    max-width: 1720px;
+    /* 화면이 아무리 커도 1720px까지만 */
+    margin: 0 auto;
+}
+
+/* 태블릿 이하 (1024px 미만) */
+@media screen and (max-width: 1024px) {
+    .skill .con {
+        width: 100%;
+        flex-direction: column;
+        /* 가로에서 세로로 변경 */
+        align-items: center;
+    }
+
+    .skill .con div {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .about .about-con {
+        flex-direction: column;
+        /* 어바웃 섹션도 세로로 */
+    }
+
+    .about .profile {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
 }
