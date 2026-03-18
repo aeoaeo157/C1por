@@ -504,6 +504,7 @@ main img {
         height: auto;
         margin: 0 auto;   /* 이미지 자체 중앙 정렬 */
         display: block;   /* 마진 auto가 먹히도록 설정 */
+        margin-bottom: 20px;
     }
 
     .about .profile ul li p {
