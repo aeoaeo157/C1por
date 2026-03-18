@@ -192,7 +192,6 @@ html {
 
  header {
     width: 100%;
-    max-width: 400px;
         padding: 20px 0; /* 상하 여백 축소 */
         margin: 0 auto;
         text-align: center;
@@ -888,11 +887,12 @@ text-align: left;
     }
 
 .mp .text {
-    width: 440px;
-    margin-left: 0px;
-    margin: 0 auto;
-    text-align: center;
-}
+        width: 100%;       /* 1. 너비를 100%로 확장하여 내부 텍스트 정렬 기반 마련 */
+        max-width: 800px;  /* 2. 가독성을 위해 최대 너비 제한 (선택 사항) */
+        margin: 0 auto !important; /* 3. !important로 기존 margin-left: 500px을 강제로 덮어씀 */
+        text-align: center; /* 4. 내부의 h4, p, span 등을 중앙으로 정렬 */
+    }  
+
 
 .mp .text .kko {
     font-size: 20px;
@@ -909,9 +909,14 @@ text-align: left;
 
 
 .mp .text p {
-    width: 440px;
-    font-size: 15px;
-}
+        width: 90%;        /* 5. 고정 너비 400px 대신 %를 사용하여 모바일 대응 */
+        max-width: 500px;  /* 적절한 선에서 줄바꿈되도록 설정 */
+        margin: 0 auto;    /* p 태그 자체를 중앙으로 */
+        font-size: 15px;
+        text-align: center;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
 
 .mp .btn {
    display: block;      /* block으로 바꿔야 margin auto가 먹힙니다 */
@@ -920,6 +925,7 @@ text-align: left;
     text-align: center;
 }
 }
+
 
 
 /* *************** 디자인 ******************** */
@@ -1097,16 +1103,28 @@ text-align: left;
 
 
 @media (max-width: 518px) {
-.design .tool {
-    width: 100%;
-    max-width: 440px;
-    text-align: center;
-    margin: 0 auto;
-}
 
+    .design .de-title {
+        width: 100% !important;
+        text-align: center;
+        margin: 0 auto 20px auto;
+    }
+.design .tool {
+        display: block !important; /* 혹시 모를 display: none 방지 */
+        width: 90% !important;
+        max-width: 440px;
+        text-align: center;
+        margin: 0 auto 20px auto !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+.design .de-title h2 {
+        width: 100% !important;
+        font-size: 30px; /* 모바일 크기에 맞게 조절 */
+        text-align: center;
+    }
 .design .btn1 {
     width: 100%;
-    max-width: 440px;
     text-align: center;
     margin: 0 auto;
 }
@@ -1128,6 +1146,11 @@ text-align: left;
 .design .gallery2 img{
    height: 380px;
 }
+.design .btn1, .design .btn2 {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
 
