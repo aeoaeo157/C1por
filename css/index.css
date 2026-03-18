@@ -194,6 +194,8 @@ html {
     width: 100%;
     max-width: 400px;
         padding: 20px 0; /* 상하 여백 축소 */
+        margin: 0 auto;
+        text-align: center;
     }
 
     header nav {
@@ -206,6 +208,7 @@ html {
 
     header .logo img {
         width: 60px;     /* 로고 크기를 확 줄임 */
+        margin-bottom: 5px;
     }
 
     header .gnb ul {
@@ -438,41 +441,24 @@ main img {
 
 @media (max-width: 1530px) {
 .about .profile img {
-    width: 400px;
-    height: auto;
-}
-.about .about-text .top img{
-  width: 55%;
-}
-.about .about-text .under img{
-  width: 80%;
-}
-}
-
-@media (max-width: 1530px) {
-.about .profile img {
     width: 300px;
     height: auto;
 }
-.about .about-text .top img{
-  width: 55%;
-}
-.about .about-text .under img{
-  width: 80%;
+.about .about-text img{
+  width: 75%;
 }
 }
+
 
 @media (max-width: 1226px) {
 .about .profile img {
     width: 250px;
     height: auto;
 }
-.about .about-text .top img{
-  width: 45%;
-}
-.about .about-text .under img{
+.about .about-text img{
   width: 65%;
 }
+
 }
 
 @media (max-width: 1094px) {
@@ -486,38 +472,56 @@ main img {
     width: 200px;
     height: auto;
 }
-.about .about-text .top img{
-  width: 40%;
-}
-.about .about-text .under img{
+.about .about-text img{
   width: 55%;
 }
 }
 
-@media (max-width: 1000px) {
+/* index.css 504번 줄 부근 수정 */
+@media (max-width: 1024px) {
     .about {
-        width: 1000px;
-        overflow: hidden;
+        width: 100%;       /* 고정 1000px 대신 화면에 맞게 100% 사용 */
+        max-width: 100%;  /* 부모 요소의 max-width 1720px 영향을 받지 않도록 초기화 */
+        overflow: visible; /* 숨김 해제 */
+        padding: 0 20px;   /* 양옆 최소 여백 확보 */
     }
-.about .profile {
-    text-align: center;
-    margin-right: none;
-    margin: 0 auto;
-}
-.about .profile ul li p {
-    font-size: 20px;
-}
-.about .profile img {
-    width: 150px;
-    height: auto;
-    margin: 0 auto;
-}
-.about .about-text .top img{
-  width: 40%;
-}
-.about .about-text .under img{
-  width: 55%;
-}
+
+    .about .about-con {
+        width: 100%;       /* 부모 너비에 맞춤 */
+        flex-direction: column; /* ★핵심: 가로 배치를 세로 배치로 변경 */
+        padding: 50px 0;   /* 상하 여백 조정 */
+        justify-content: center; /* 세로 상태에서 중앙 정렬 */
+        align-items: center;     /* 자식 요소들을 가로축 중앙으로 모음 */
+    }
+
+    .about .profile {
+        margin: 0 auto 40px auto; /* ★핵심: auto 마진으로 가로 중앙 정렬 + 아래 여백 */
+        text-align: center;
+        width: 100%;      /* 부모 너비를 꽉 채워서 text-align이 먹히게 함 */
+    }
+
+    .about .profile img {
+        width: 250px;     /* 적절한 크기로 조정 */
+        height: auto;
+        margin: 0 auto;   /* 이미지 자체 중앙 정렬 */
+        display: block;   /* 마진 auto가 먹히도록 설정 */
+    }
+
+    .about .profile ul li p {
+        font-size: 18px;  /* 글자 크기 살짝 축소 */
+        text-align: center; /* 텍스트 중앙 정렬 */
+    }
+
+    .about .about-text {
+        width: 100%;      /* 부모 너비에 맞춤 */
+        text-align: center; /* 내부 요소 중앙 정렬 */
+    }
+    
+    .about .about-text img {
+        width: 80%;       /* 모바일/태블릿 환경에 맞게 이미지 너비 조정 */
+        margin: 0 auto;   /* 이미지 중앙 정렬 */
+        display: block;   /* 마진 auto가 먹히도록 설정 */
+    }
 }
 
 
