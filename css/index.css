@@ -532,9 +532,12 @@ main img {
 /* ******************* 스킬 ************************ */
 
 .skill {
-    width: 1720px;
+ width: 100%;
+    max-width: 1720px;
     margin: 0 auto;
-    margin-bottom: 180px;
+    display: block; 
+    overflow: hidden; /* 자식의 float 높이를 인식하게 함 */
+    clear: both; /* 이전 요소의 float 영향 차단 */
 }
 
 .skill h2 {
@@ -611,12 +614,34 @@ main img {
     border: 1px solid #858585;
 }
 
+@media (max-width: 1594px) {
+    .skill .con {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1210px) {
+    .skill .con h3 {
+        font-size: 23px;
+    }
+}
+
+
+
+
+
+
+
 /* **************** 메인 꼬순내 ************** */
 
 .mp {
-    width: 1720px;
+width: 100%;
+    max-width: 1720px;
     margin: 0 auto;
-    margin-bottom: 160px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: block;
+    clear: both;
 }
 
 
@@ -748,6 +773,156 @@ main img {
 
 
 
+@media (max-width: 1658px) {
+    .mp .fir img {
+    width: 680px;
+    margin-left: 400px;
+}
+
+.mp .sec img {
+    width: 200px;
+}
+
+.mp .text {
+    margin-left: 480px;
+}
+
+.mp .text .kko {
+    font-size: 35px;
+}
+
+.mp .text .sub {
+    font-size: 25px;
+}
+
+
+.mp .text h4 {
+    font-size: 25px;
+}
+
+
+.mp .text p {
+    font-size: 18px;
+}
+
+.mp .btn {
+    margin-left: 480px;
+}
+}
+
+
+@media (max-width: 1462px) {
+    .mp .fir img {
+    width: 480px;
+    margin-left: 400px;
+}
+
+.mp .sec img {
+    width: 100px;
+}
+
+.mp .text {
+    margin-left: 480px;
+}
+
+.mp .text .kko {
+    font-size: 35px;
+}
+
+.mp .text .sub {
+    font-size: 25px;
+}
+
+
+.mp .text h4 {
+    font-size: 25px;
+}
+
+
+.mp .text p {
+    font-size: 16px;
+}
+
+.mp .btn {
+    margin-left: 480px;
+}
+}
+
+
+@media (max-width: 1374px) {
+.mp .title {
+    text-align: center;
+}
+
+.mp .title h2{
+text-align: left;
+}
+
+.mp .btn img { /* 또는 해당 이미지 클래스 */
+    display: block;    /* 글자 성격을 버리고 블록으로 변경 */
+    margin: 0 auto;    /* 좌우 마진을 자동으로 설정하여 중앙 정렬 */
+}
+
+.mp .mp-con {
+        flex-direction: column; /* 가로가 아닌 세로로 배치 */
+        align-items: center;    /* 자식 요소들을 가로 중앙으로 정렬 */
+        text-align: center;
+    }
+    
+
+.mp .device {
+    width: 100%;
+    text-align: center;
+}
+
+.mp .fir img {
+        width: 340px;
+        display: block;    /* 이미지를 블록 요소로 변경 */
+        margin: 0 auto;    /* ★ 좌우 마진을 auto로 설정하여 중앙 정렬 */
+        /* margin-left: 0px;  <-- 이 줄은 삭제하세요! */
+    }
+
+    .mp .sec img {
+        width: 80px;
+        display: block;    /* 두 번째 이미지도 중앙에 오게 하려면 추가 */
+        margin: 0 auto;
+    }
+
+.mp .text {
+    width: 440px;
+    margin-left: 0px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mp .text .kko {
+    font-size: 20px;
+}
+
+.mp .text .sub {
+    font-size: 17px;
+}
+
+
+.mp .text h4 {
+    font-size: 17px;
+}
+
+
+.mp .text p {
+    width: 440px;
+    font-size: 15px;
+}
+
+.mp .btn {
+   display: block;      /* block으로 바꿔야 margin auto가 먹힙니다 */
+    width: fit-content;  /* 버튼 글자 크기만큼만 너비를 잡습니다 */
+    margin: 0 auto;      /* 좌우 마진을 자동으로 설정 (중앙 정렬) */
+    text-align: center;
+}
+}
+
+
 /* *************** 디자인 ******************** */
 
 .design {
@@ -796,6 +971,7 @@ main img {
     color: #fff;
     display: inline-block;
     border-radius: 5px;
+       margin-bottom: 20px;
 }
 
 .design .de-title .btn1 span {
@@ -916,6 +1092,45 @@ main img {
         transform: translateX(0);
     }
 }
+
+
+
+
+
+@media (max-width: 518px) {
+.design .tool {
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.design .btn1 {
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.design .gallery img{
+    width: 320px;
+}
+
+/* index.css 약 440번 줄 부근 수정 */
+.design .de-title .btn2 {
+    text-align: center; /* 부모에서 자식(a태그)을 중앙으로 보냅니다 */
+    width: 100%;       /* 부모가 전체 너비를 차지하게 합니다 */
+}
+
+.design .de-title .btn2 a {
+    float: none;
+}
+
+.design .gallery2 img{
+   height: 380px;
+}
+}
+
 
 
 
@@ -1058,6 +1273,33 @@ main img {
 }
 
 
+@media (max-width: 518px) {
+
+/* 텍스트가 들어가는 첫 번째 칸 (Let's Work Together!) */
+.contact ul li.text {
+    font-size: 18px;
+    padding: 40px 0;
+}
+
+/* 아이콘이 들어가는 링크 칸 설정 */
+.contact ul li a {
+    padding: 20px 0;
+}
+.contact ul li img {
+    width: 35px;
+    /* 시안에 맞춰 아이콘 크기 조절 */
+    height: auto;
+}
+.contact .email a {
+    font-size: 45px;
+}
+}
+
+
+
+
+
+
 
 /* ************** 푸터 *************** */
 
@@ -1116,5 +1358,14 @@ footer div {
     .about .profile {
         margin-right: 0;
         margin-bottom: 50px;
+    }
+}
+
+
+
+@media (max-width: 518px) {
+    footer p {
+        font-size: 16px;
+        text-align: center;
     }
 }
