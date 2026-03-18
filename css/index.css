@@ -677,10 +677,9 @@ width: 100%;
 
 .mp .fir img {
     width: 880px;
-    display: block;
-
-    margin-left: 400px;
+    margin-left: 400px; /* 여기서 880 + 400 = 1280px을 이미 차지함 */
 }
+
 
 .mp .sec img {
     width: 250px;
@@ -1368,4 +1367,27 @@ footer div {
         font-size: 16px;
         text-align: center;
     }
+}
+
+
+/* 1. 모든 섹션의 고정 너비 해제 */
+.about, .skill, .mp, .design .de-title, footer div {
+    width: 95% !important; /* 고정 px 대신 퍼센트 사용 */
+    max-content: 1720px;
+    margin: 0 auto;
+}
+
+/* 2. mp 섹션 이미지 강제 정렬 해제 (중요) */
+@media (max-width: 1462px) {
+    .mp .fir img {
+        margin-left: 0 !important;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px; /* 적절한 크기로 제한 */
+    }
+}
+
+/* 3. 전체 페이지 가로 삐져나옴 방지 */
+body {
+    overflow-x: hidden; /* 최후의 수단: 화면 밖으로 나가는 건 다 숨김 */
 }
